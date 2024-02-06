@@ -1,0 +1,1 @@
+web: gunicorn healdash.wsgi --timeout 10 --log-level debug

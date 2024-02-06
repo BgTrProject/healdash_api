@@ -1,0 +1,536 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    
+    <!--====== Title ======-->
+    <title>Knowledge Sharing in Turkish Health Forums</title>
+     <meta property="og:image" content="https://drgoktugasci.com/assets/other/text_mining.png" />
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="{% static "landing/assets/css/slick.css" %}">
+        
+    <!--====== Font Awesome CSS ======-->
+    <link rel="stylesheet" href="{% static "landing/assets/css/font-awesome.min.css" %}">
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="{% static "landing/assets/css/LineIcons.css" %}">
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="{% static "landing/assets/css/animate.css" %}">
+        
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="{% static "landing/assets/css/magnific-popup.css" %}">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="{% static "landing/assets/css/bootstrap.min.css" %}">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="{% static "landing/assets/css/default.css" %}">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="{% static "landing/assets/css/style.css" %}">
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <style>
+        
+        @media (max-width: 768px) {
+            .card-columns {
+                column-count: 1;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .card-columns {
+                column-count: 2;
+            }
+        }
+        /* Large devices (desktops, 992px and up) */
+        
+        @media (min-width: 992px) {
+            .card-columns {
+                column-count: 2;
+            }
+            .member-photo{
+                padding: 20px;
+                padding-right:300px;
+            }   
+        }
+        /* Extra large devices (large desktops, 1200px and up) */
+        
+        @media (min-width: 1200px) {
+            .card-columns {
+                column-count: 2;
+            }
+            .member-photo{
+                padding: 20px;
+                padding-right:300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    <!--====== HEADER PART START ======-->
+    
+    <header class="header-area">
+        <div class="navbar-area headroom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <h4 class="navbar-brand">
+                                KSTHF
+                            </h4>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav m-auto">
+                                    <li class="nav-item active">
+                                        <a href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#aims">Project Aims</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#members">Project Members</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#gallery">Events</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                            
+                            <div class="navbar-btn">
+                                <a class="main-btn" href="https://github.com/gasci/health-data-scraper" target="_blank">Go To Healdash</a>
+                            </div>
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+        
+        <div id="home" class="header-hero bg_cover d-lg-flex align-items-center" style="background-image: url(assets/images/header-hero.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="header-hero-content">
+                            <h1 class="hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">Knowledge Sharing in Turkish Health Forums</h1>
+                            <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">Developing a decision support system to tackle the epidemic dissemination of pseudo-scientific claims.</p>
+                            <span style="font-size:15px;" class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">Funded by The British Academy (Newton Advanced Fellowship)</span>
+                            <br><br>
+                        </div> <!-- header hero content -->
+                    </div>
+                    <div class="col-lg-5">
+                        <img class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" src="https://drgoktugasci.com/assets/other/text_mining.png">
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header hero -->
+
+        
+    </header>
+    
+    <!--====== HEADER PART ENDS ======-->
+    
+    <!--====== ABOUT PART START ======-->
+    
+    <section id="aims" class="about-area pt-115 pb-5">
+        <div class="container">
+        <div class="section-title pb-20  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                        {% comment %} <h6 class="sub-title">Portfolio</h6> {% endcomment %}
+                        <h4 class="title"><u>Project Aims</u></h4>
+                    </div> <!-- section title -->
+            <div class="row align-items-center" style="margin:auto">
+            <div>
+                <h4 class="text"><strong>Knowledge sharing in Turkish health forums: developing a decision support system to tackle the epidemic dissemination of pseudo-scientific claims</strong><h4>
+    <br>
+
+    <p class="text">Online health forums are becoming popular among those who seek health care information in Turkey. Despite this popularity, their users do not usually have enough health literacy for assessing the quality of this information. The aim of our project is to improve our understanding of the extent and mechanisms under which health forums impact the quality of available knowledge necessary to make informed decisions on health issues. Delineating these mechanisms can provide the guidelines for an informatics system that produces high quality knowledge with the help of health care experts, while not overlooking the discursive and empowering potentials of the user generated content. </p> 
+<br>
+    <p class="text">We adopt a participatory action research methodology for exploring the challenges that Turkish stakeholders face and seeking possible solutions. Text mining techniques are used to collect and summarize the content in health forums for informing the different processes of action research. As part of our project deliverables, we have designed a set of preliminary Python scripts to mine available health data from forums and news sources.</p>
+<br>
+    <p class="text">Funded by The British Academy (Newton Advanced Fellowship Scheme), our project has commenced in September 2018 and currently scheduled to end in August 2021 (end date is subject to Covid-19 circumstances)</p>
+            
+        </div> <!-- container -->
+    </section>
+    
+    
+    <!--====== ABOUT PART ENDS ======-->
+
+
+      <section id="members" class="about-area pt-115 pb-5">
+        <div class="container">
+        <div class="section-title pb-20  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                        {% comment %} <h6 class="sub-title">Portfolio</h6> {% endcomment %}
+                        <h4 class="title"><u>Project Members</u></h4>
+                    </div> <!-- section title -->
+           <div class="card-columns ">
+                <div class="card ">
+                 <img class="card-img-top member-photo" src="/static/image/team1.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Assoc. Prof. Emek Usenmez</h4>
+                        <p class="card-text">
+                        Dr. Usenmez graduated from the Turkish Language and Literature Department of Konya Selçuk University in 2004. He obtained his Masters (University of Dumlupinar) in 2004 and his PhD (University of Istanbul) in 2010, respectively. Dr. Üşenmez is currently an Associate Professor of Turkish Language at Istanbul University Language Centre. He is interested in The Old Anatolian Turkish (as part of Western-Oghuz Turkic), Ottoman Turkish and contemporary Turkish dialects such as Uzbek-Turkmen & Crimean Tatar, and in teaching Turkish as a foreign language for foreigners. His academic work has published in top journals such as Turkish Studies. He was invited twice to Harvard University as a visiting academic. Following that, he was invited by Cambridge University as a visiting fellow. On top of his academic career, Dr. Usenmez served as the Educational Counsellor of Turkish Embassy in London from 2016 to 2017.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ">
+                 <img class="card-img-top member-photo" src="static/image/team2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Dr. Soydan Soylu</h4>
+                        <p class="card-text">
+                        Dr. Soylu is a Senior Lecturer in Organisational Psychology and the Leader of Science and Technology Communication Research Cluster at Middlesex University Business School. He completed his MSc and PhD at the London School of Economics (LSE), Department of Psychological and Behavioural Science. Prior to joining Middlesex University, Dr. Soylu was a visiting fellow at Harvard University, Department of Psychology, and he worked at the LSE, Department of Management from 2011 to 2013 as a Post-Doctoral Research Fellow. His research interests include the dark side of behaviours at work, open social innovation, intergroup relations, and the determinants of societal inequality. Dr. Soydan Soylu was a key partner in the "Get together without barriers" project, funded by the JPI-Urban Europe and TÜBITAK (€200K), a Turkey-Austria joint project, to accomplish the conceptualization of an online job matching platform for overqualified but socially disadvantaged groups. Dr. Soylu acted as the Principal Investigator for the Institutional Links project funded by the British Council (£87K) to create an Open social innovation platform system design for encouraging young education volunteers to put their creative ideas in science teaching, involving action research. Dr. Soylu's work has published in top journals in the field of management such as Human Relations and Journal of Business Ethics.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ">
+                 <img class="card-img-top member-photo" src="./static/image/team3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Dr. Fatma Nuran Dogruer</h4>
+                        <p class="card-text">
+                        Dr. Fatma Nuran Dogruer is a faculty member at Department of Health Management, Istanbul Bilgi University. Dr. Dogruer is a medical doctor (ENT specialist). She served as the Vice Director at Vocational School of Health Services (2019-2021) and Deputy Dean of Faculty of Health Sciences (2017-2019) at Istanbul Bilgi University.
+                        </p>
+                    </div>
+                </div>
+                <div class="card ">
+                 <img class="card-img-top member-photo" src="/static/image/team4.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Dr. Satkeen Azizzadeh</h4>
+                        <p class="card-text">
+                        Dr. Azizzadeh is a Lecturer in Human Resources at Middlesex University. She obtained her PhD in Organisational and Social Psychology from London School of Economics and Political Science in 2015. Prior to her doctoral studies, Satkeen earned an MSc in Organisational and Social Psychology from LSE and an MBA from McGill University, Canada. Satkeen is an experienced action researcher, with years of involvement in various industries, including finance and insurance as her research explores the micro-dynamics of organisational change and development from an organisational and cultural psychology point of view. She is particularly interested in the implementation of organisational change programs using various qualitative research methods. Through a three-year longitudinal qualitative study, Satkeen’s PhD used the workforce nationalization programs in the Middles East as a case study to explore how positive discrimination policies are developed and implemented and their impact on employees’ identities as well as on organizational cultural and working practices.
+                        </p>
+                    </div>
+                </div>
+                
+                
+           </div>
+        </div> <!-- container -->
+    </section>
+    
+    
+    <!--====== ABOUT PART ENDS ======-->
+
+
+
+    
+    <!--====== PROJECT GALLERY PART START ======-->
+
+    <section id="gallery" class="project-masonry-area pt-115">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-lg-4">
+                    <div class="section-title pb-20  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                        {% comment %} <h6 class="sub-title">Portfolio</h6> {% endcomment %}
+                        <h4 class="title"><u>Events</u></h4>
+                    </div> <!-- section title -->
+                </div>
+                <div class="col-lg-8">
+                    <div class="project-menu text-center text-sm-left text-lg-right pb-20">
+                        <ul>
+                            <li class="active" data-filter="*">See All</li>
+                            <li data-filter=".middlesex">Westminster Debate with Prof. Gaye Usluer</li>
+                            <li data-filter=".british_ac">Round table discussion with Prof. Demirci and Dr. Aydogmus</li>
+                        </ul>
+                    </div> <!-- project menu -->
+                </div>
+            </div> <!-- row -->
+            
+            <div class="row grid">
+                <div class="col-lg-4 col-sm-6 grid-item middlesex">
+                    <div class="single-gallery gallery-masonry mt-30">
+                        <div class="gallery-image">
+                            <img src="/static/image/events1.jpg" alt="gallery">
+                        </div>
+                        <div class="gallery-icon">
+                            <a class="image-popup" href="https://drgoktugasci.com/assets/other/IMG_1-min.jpeg">
+                                <span></span>
+                            </a>
+                        </div>
+                    </div> <!-- single gallery -->
+                </div>
+                <div class="col-lg-4 col-sm-6 grid-item middlesex">
+                    <div class="single-gallery gallery-masonry mt-30">
+                        <div class="gallery-image">
+                            <img src="/static/image/events2.jpg" alt="gallery">
+                        </div>
+                        <div class="gallery-icon">
+                            <a class="image-popup" href="https://drgoktugasci.com/assets/other/IMG_2-min.jpeg">
+                                <span></span>
+                            </a>
+                        </div>
+                    </div> <!-- single gallery -->
+                </div>
+                <div class="col-lg-4 col-sm-6 grid-item middlesex">
+                    <div class="single-gallery gallery-masonry mt-30">
+                        <div class="gallery-image">
+                            <img src="/static/image/events3.jpg" alt="gallery">
+                        </div>
+                        <div class="gallery-icon">
+                            <a class="image-popup" href="https://drgoktugasci.com/assets/other/IMG_3-min.jpeg">
+                                <span></span>
+                            </a>
+                        </div>
+                    </div> <!-- single gallery -->
+                </div>
+                <div class="col-lg-4 col-sm-6 grid-item middlesex">
+                    <div class="single-gallery gallery-masonry mt-30">
+                        <div class="gallery-image">
+                            <img src="/static/image/events4.jpg" alt="gallery">
+                        </div>
+                        <div class="gallery-icon">
+                            <a class="image-popup" href="https://drgoktugasci.com/assets/other/IMG_4-min.jpeg">
+                                <span></span>
+                            </a>
+                        </div>
+                    </div> <!-- single gallery -->
+                </div>
+                <div class="col-lg-4 col-sm-6 grid-item british_ac">
+                    <div class="single-gallery gallery-masonry mt-30">
+                        <div class="gallery-image">
+                            <img src="/static/image/events5.jpg" alt="gallery">
+                        </div>
+                        <div class="gallery-icon">
+                            <a class="image-popup" href="https://drgoktugasci.com/assets/other/IMG_5-min.jpeg">
+                                <span></span>
+                            </a>
+                        </div>
+                    </div> <!-- single gallery -->
+                </div>
+                <div class="col-lg-4 col-sm-6 grid-item british_ac">
+                    <div class="single-gallery gallery-masonry mt-30">
+                        <div class="gallery-image">
+                            <img src="/static/image/events6.jpg" alt="gallery">
+                        </div>
+                        <div class="gallery-icon">
+                            <a class="image-popup" href="https://drgoktugasci.com/assets/other/IMG_6-min.jpeg">
+                                <span></span>
+                            </a>
+                        </div>
+                    </div> <!-- single gallery -->
+                </div>
+                <div class="">
+                    <div class="grid-item middlesex pt-4 pl-3 pr-3">
+                        <h5>Westminster Debate with Prof. Gaye Usluer</h5>
+                        As part of our end of first year activities, on 23rd of October 2019, we organised a Debate in the Houses of Parliament entitled "Public Health Practices in Turkey" with Prof. Gaye Usluer. This event was co-organised with the Centre for Turkey Studies (CEFTUS). In her talk, Prof. Usluer discussed the health practices in Turkey and made remarks on the importance of our project in responding to the current health practice issues in Turkey.
+                        <br>
+                        <iframe width="100%" height="500" style="border-radius:10px;margin:auto;margin-top:10px" src="https://www.youtube.com/embed/FZ3IrrNXoM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="card-columns mt-3">
+                        
+                <div class="card ">
+                 <img class="card-img-top member-photo" src="/static/image/gaye.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Prof. Gaye Usluer</h4>
+                        <p class="card-text">
+                        Professor Gaye Usluer is an academic and former member of Turkish Parliament for Eskisehir with the opposition Republican People’s Party. She served as a member of the Turkish parliament’s education committee. Having graduated from the Faculty of Medicine at the Hacettepe University, she became a professor in 1998. She is currently the Head of the Division of Infectious Diseases at the Faculty of Medicine in Eskisehir Osmangazi University, and a member of the Party Assembly of Republican People’s Party. Prof. Usluer was a visiting professor in Oxford John Raddclif Hospital in 1996, a Management Committee Member of the Society for Infectious Diseases and Clinical Microbiology Specialty in 2006 and she is currently an honorary board member at the Eskisehir Medical Association.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                        </div> <!-- row -->
+                         
+                    </div>
+             
+                    <div class="grid-item british_ac pt-4 pl-3 pr-3">
+                        <h5>Round table discussion with Prof. Demirci and Dr. Aydogmus</h5>
+                        As part of our end of first year activities, we organised a seminar delivered by Prof. Ali Demirci of Istanbul Bilgi University and Dr. Yasemin Aydogmus of Istanbul University on 25th October 2019. Prof. Demirci talked about health literacy differences between the UK and Turkey and the importance of sustaining communication among laypersons and health practitioners to increase health literacy while Yasemin Aydogmus gave a speech about data protection and information governance in healthcare.
+                        <div class="card-columns mt-2">
+                
+                 <div class="card ">
+                 <img class="card-img-top member-photo" src="/static/image/events7.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Prof. Ali Demirci</h4>
+                        <p class="card-text">
+                        Prof. Demirci is graduated from Hacettepe Medical School. He is a Professor at Bilgi University Faculty of Health Sciences. He had administrative duties including dean of Medical School, vice rector, founder and chief of radiology department, coordinator of university hospital construction, head of university rolling budget, and head of university research fund. He led several collaborative projects related to health communication and management. 
+                        </p>
+                    </div>
+                </div>
+                 <div class="card ">
+                 <img class="card-img-top member-photo" src="/static/image/events8.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Dr. Yasemin Aydoğmuş</h4>
+                        <p class="card-text">
+                        Dr. Yasemin Aydoğmuş is an Assistant Professor at the Faculty of Law, Istanbul University since 2018. She obtained her undergraduate degree in law from Koç University and completed her graduate degrees (LLM and PhD) in Istanbul University. She is currently working on data privacy and protection of health data, and private international law.
+                        </p>
+                    </div>
+                </div>
+                </div>
+                    </div>
+                </div>
+
+            </div> <!-- row -->
+            
+        </div> <!-- container -->
+    </section>
+
+    <!--====== PROJECT GALLERY PART ENDS ======-->
+    
+    <!--====== CONTACT PART START ======-->
+
+    {% comment %} <section id="contact" class="contact-area pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="section-title text-center pb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <h6 class="sub-title">Our Contact</h6>
+                        <h4 class="title">Get In <span>Touch.</span></h4>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="contact-info pt-30">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="single-contact-info contact-color-2 mt-30 d-flex  wow fadeInUp align-middle" data-wow-duration="1s" data-wow-delay="0.6s">
+                            <div class="contact-info-icon">
+                                <i class="lni-envelope"></i>
+                            </div>
+                            <div class="contact-info-content media-body">
+                                <a class="text" href="mailto:s.soylu@mdx.ac.uk" target="_blank">s.soylu@mdx.ac.uk</a>
+                            </div>
+                        </div> <!-- single contact info -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- contact info -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-wrapper-form pt-115  wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h4 class="contact-title pb-10"><i class="lni-envelope"></i> Leave <span>A Message.</span></h4>
+                        
+                        
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="contact-form mt-45">
+                                        <label>Enter Your Name</label>
+                                        <input type="text" name="subject" placeholder="Full Name">
+                                    </div> <!-- contact-form -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="contact-form mt-45">
+                                        <label>Enter Your Email</label>
+                                        <input type="email" name="email" placeholder="Email">
+                                    </div> <!-- contact-form -->
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="contact-form mt-45">
+                                        <label>Your Message</label>
+                                        <textarea name="body" placeholder="Enter your message..."></textarea>
+                                    </div> <!-- contact-form -->
+                                </div>
+                                <p class="form-message"></p>
+                                <div class="col-md-12">
+                                    <div class="contact-form mt-45">
+                                        <button target="_blank" class="main-btn" onclick="location.href='mailto:?subject=Interesting information&body=I thought you might find this information interesting: ';">Send Now</button>
+                                    </div> <!-- contact-form -->
+                                </div>
+                            </div> <!-- row -->
+                        
+                    </div> <!-- contact wrapper form -->
+                </div>
+            </div> <!-- row --> 
+        </div> <!-- container -->
+    </section> {% endcomment %}
+
+    <!--====== CONTACT PART ENDS ======-->
+    
+    <!--====== FOOTER PART START ======-->
+    <section id="contact">
+    <footer id="footer" class="footer-area bg_cover" style="background-image: url(assets/images/footer-bg.jpg)">
+        <div class="container">
+            <div class="footer-widget pt-30 pb-70">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 order-sm-2 order-lg-4">
+                        <div class="footer-contact pt-40">
+                            <div>
+                                <h4 class="title"><u>Contact Info</u></h4>
+                            </div>
+                            <div class="contact">
+                                Email: <a class="text" href="mailto:s.soylu@mdx.ac.uk" target="_blank">s.soylu@mdx.ac.uk</a>
+                                
+                                {% comment %} <ul class="social mt-40">
+                                    <li><a href="#"><i class="lni-facebook"></i></a></li>
+                                    <li><a href="#"><i class="lni-twitter"></i></a></li>
+                                    <li><a href="#"><i class="lni-instagram"></i></a></li>
+                                    <li><a href="#"><i class="lni-linkedin"></i></a></li>
+                                </ul> {% endcomment %}
+                            </div> <!-- contact -->
+                        </div> <!-- footer contact -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- footer widget --> 
+            <div class="footer-copyright text-center">
+                <p class="text">© 2021 Crafted by <a href="https://drgoktugasci.com/" target="_blank">Dr. Göktuğ Aşcı</a> All Rights Reserved.</p>
+            </div>
+        </div> <!-- container -->
+    </footer>
+    </section>
+    
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->  
+
+
+    <!--====== Jquery js ======-->
+    <script src="{% static "landing/assets/js/vendor/jquery-1.12.4.min.js" %}"></script>
+    <script src="{% static "landing/assets/js/vendor/modernizr-3.7.1.min.js" %}"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="{% static "landing/assets/js/popper.min.js" %}"></script>
+    <script src="{% static "landing/assets/js/bootstrap.min.js" %}"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="{% static "landing/assets/js/slick.min.js" %}"></script>
+    
+    <!--====== Isotope js ======-->
+    <script src="{% static "landing/assets/js/imagesloaded.pkgd.min.js" %}"></script>
+    <script src="{% static "landing/assets/js/isotope.pkgd.min.js" %}"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="{% static "landing/assets/js/waypoints.min.js" %}"></script>
+    <script src="{% static "landing/assets/js/jquery.counterup.min.js" %}"></script>
+    
+    <!--====== Circles js ======-->
+    <script src="{% static "landing/assets/js/circles.min.js" %}"></script>
+    
+    <!--====== Appear js ======-->
+    <script src="{% static "landing/assets/js/jquery.appear.min.js" %}"></script>
+    
+    <!--====== WOW js ======-->
+    <script src="{% static "landing/assets/js/wow.min.js" %}"></script>
+    
+    <!--====== Headroom js ======-->
+    <script src="{% static "landing/assets/js/headroom.min.js" %}"></script>
+    
+    <!--====== Jquery Nav js ======-->
+    <script src="{% static "landing/assets/js/jquery.nav.js" %}"></script>
+    
+    <!--====== Scroll It js ======-->
+    <script src="{% static "landing/assets/js/scrollIt.min.js" %}"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="{% static "landing/assets/js/jquery.magnific-popup.min.js" %}"></script>
+    
+    <!--====== Main js ======-->
+    <script src="{% static "landing/assets/js/main.js" %}"></script>
+    
+</body>
+
+</html>
